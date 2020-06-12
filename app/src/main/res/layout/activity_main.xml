@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spike Test analytics!"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+       android:layout_margin="30dp"
+        />
+
+    <EditText
+        android:id="@+id/edtUserId"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="input user id"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/bg_gray_with_curve"/>
+
+    <Button
+        android:id="@+id/btnTestCustomEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test custom event"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="26dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button"/>
+
+    <Button
+        android:id="@+id/btnTestFirebaseEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test firebase default event"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="26dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/btnTestUserProperty"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Test user property"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginTop="18dp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:background="@drawable/button"/>-->
+
+</LinearLayout>

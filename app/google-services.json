@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "509642237022",
+    "firebase_url": "https://test-analytics-68aa2.firebaseio.com",
+    "project_id": "test-analytics-68aa2",
+    "storage_bucket": "test-analytics-68aa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509642237022:android:e8ef260e944ab6a21840cf",
+        "android_client_info": {
+          "package_name": "com.test.analytic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509642237022-pbduepvdca5i5qqt2151cg5rrkrf49id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChl9WWY9kQlno-L_WsU8piKF8nEZ64Gs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509642237022-pbduepvdca5i5qqt2151cg5rrkrf49id.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
