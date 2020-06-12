@@ -16,7 +16,7 @@ class AnalyticProcess(){
 
     }
 
-    fun initFirebase() {
+    private fun initFirebase() {
         firebaseAnalytics = Firebase.analytics
     }
 
@@ -36,11 +36,7 @@ class AnalyticProcess(){
         firebaseAnalytics.logEvent(AnalyticEvent.CLICK_BUTTON, bundle)
     }
 
-    fun logCustomEvent(eventName: String, bundle: Bundle) {
-//        val bundle = Bundle()
-//        bundle.putString(AnalyticKey.USER_ID, userId)
-//        bundle.putString(AnalyticKey.PRIVILEGE_ID, "buttonName")
-//        bundle.putString(AnalyticKey.PRIVILEGE_NAME, "buttonName")
+    fun logEvent(eventName: String, bundle: Bundle) {
         firebaseAnalytics.logEvent(eventName, bundle)
     }
 }

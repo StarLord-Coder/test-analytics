@@ -3,9 +3,6 @@ package com.test.analytic
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase
 import com.test.analytic.activity.CustomEventActivity
 import com.test.analytic.activity.FirebaseDefaultEventActivity
 import com.test.analytic.constants.AnalyticEvent
@@ -16,17 +13,13 @@ import it.sephiroth.android.library.xtooltip.Tooltip
 import it.sephiroth.android.library.xtooltip.Typefaces
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
-    var tooltip: Tooltip? = null
+    private var tooltip: Tooltip? = null
 
-
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
     var analyticProcess: AnalyticProcess = AnalyticProcess()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        firebaseAnalytics = Firebase.analytics
 
         analyticProcess.setScreenName(this, AnalyticScreen.MAIN)
 
@@ -34,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             if(!validateUserId()) {
                 analyticProcess.setFirebaseUserId(edtUserId.text.toString())
                 analyticProcess.logEventClick(AnalyticEvent.BTN_CUSTOM)
-                var intent = Intent(this, CustomEventActivity::class.java)
+                val intent = Intent(this, CustomEventActivity::class.java)
                 intent.putExtra(AnalyticKey.USER_ID, edtUserId.text.toString())
                 startActivity(intent)
             }
@@ -44,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             if(!validateUserId()) {
                 analyticProcess.setFirebaseUserId(edtUserId.text.toString())
                 analyticProcess.logEventClick(AnalyticEvent.BTN_FIREBASE_DEFAULT)
-                var intent = Intent(this, FirebaseDefaultEventActivity::class.java)
+                val intent = Intent(this, FirebaseDefaultEventActivity::class.java)
                 intent.putExtra(AnalyticKey.USER_ID, edtUserId.text.toString())
                 startActivity(intent)
             }
@@ -83,5 +76,4 @@ class MainActivity : AppCompatActivity() {
             return false
         }
     }
-
 }

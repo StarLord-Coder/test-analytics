@@ -7,10 +7,6 @@ class AnalyticEvent {
         const val OPEN_USER_PROPERTY_SCREEN = "open_user_property_screen"
         const val OPEN_CUSTOM_EVENT_SCREEN = "open_custom_event_screen"
 
-        const val OPEN_HOME_SCREEN = "event_home_screen"
-
-
-
         /**   button name  **/
         const val BTN_CUSTOM = "btn_custom"
         const val BTN_FIREBASE_DEFAULT = "btn_fb_default"

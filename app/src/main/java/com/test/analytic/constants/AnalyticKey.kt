@@ -5,7 +5,6 @@ class AnalyticKey {
         const val USER_ID = "user_id"
         const val BTN_NAME = "btn_name"
 
-
         const val PRIVILEGE_ID = "pr_id"
         const val PRIVILEGE_NAME = "pr_name"
         const val PRIVILEGE_TYPE = "pr_type"

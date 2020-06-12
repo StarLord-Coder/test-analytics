@@ -1,5 +1,6 @@
 package com.test.analytic.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,9 +13,10 @@ import kotlinx.android.synthetic.main.activity_fb_default_event.*
 
 class FirebaseDefaultEventActivity : AppCompatActivity() {
 
-    var uid: String = ""
-    var analyticProcess: AnalyticProcess = AnalyticProcess()
+    private var uid: String = ""
+    private var analyticProcess: AnalyticProcess = AnalyticProcess()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fb_default_event)
@@ -54,7 +56,7 @@ class FirebaseDefaultEventActivity : AppCompatActivity() {
         bundle.putString(AnalyticKey.USER_ID, uid)
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "autoexcellence001")
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "รับส่วนลด 200 บาท ค่าอุปกรณ์เซนเซอร์หน้า-หลัง แบบไม่เจาะกันชน จากราคาปกติ 1,350 บาท")
-        analyticProcess.logCustomEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
+        analyticProcess.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
         Toast.makeText(this, "Send select privilege event with pr_id = autoexcellence001 to analytic.", Toast.LENGTH_LONG).show()
     }
 
@@ -63,7 +65,7 @@ class FirebaseDefaultEventActivity : AppCompatActivity() {
         bundle.putString(AnalyticKey.USER_ID, uid)
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "yogurtland002")
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "รับส่วนลด 15% ทุกรสชาติ จาก Yogurtland")
-        analyticProcess.logCustomEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
+        analyticProcess.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
         Toast.makeText(this, "Send select privilege event with pr_id = yogurtland002 to analytic.", Toast.LENGTH_LONG).show()
     }
 
@@ -73,7 +75,7 @@ class FirebaseDefaultEventActivity : AppCompatActivity() {
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "autoexcellence001")
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "USSD")
         bundle.putString(FirebaseAnalytics.Param.VALUE, "*700*12345#")
-        analyticProcess.logCustomEvent(FirebaseAnalytics.Event.EARN_VIRTUAL_CURRENCY, bundle)
+        analyticProcess.logEvent(FirebaseAnalytics.Event.EARN_VIRTUAL_CURRENCY, bundle)
         Toast.makeText(this, "Send redeem code event with *700*12345# to analytic.", Toast.LENGTH_LONG).show()
     }
 
@@ -83,7 +85,7 @@ class FirebaseDefaultEventActivity : AppCompatActivity() {
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "yogurtland002")
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "PROMO_CODE")
         bundle.putString(FirebaseAnalytics.Param.VALUE, "KA3301772J5")
-        analyticProcess.logCustomEvent(FirebaseAnalytics.Event.EARN_VIRTUAL_CURRENCY, bundle)
+        analyticProcess.logEvent(FirebaseAnalytics.Event.EARN_VIRTUAL_CURRENCY, bundle)
         Toast.makeText(this, "Send redeem code event with KA3301772J5 to analytic.", Toast.LENGTH_LONG).show()
     }
 }
